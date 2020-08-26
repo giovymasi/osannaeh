@@ -5,7 +5,7 @@ BotOS useful files
 
 EN
 
-!!!THIS IS NON A PROGRAM, NOR ANYTHING ELSE WORKING ON HIS OWN!!!
+!!!THIS IS NOT NEITHER A PROGRAM, NOR ANYTHING THAT WORKS INDIPENDENTLY!!!
 
 This files can only be used to improve BotOS experience (created by @Falco).
 
