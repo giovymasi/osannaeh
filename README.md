@@ -5,15 +5,11 @@ BotOS useful files
 
 EN
 
-!!!THIS IS NOT NEITHER A PROGRAM, NOR ANYTHING THAT WORKS INDIPENDENTLY!!!
-
-This files can only be used to improve BotOS experience (created by @Falco).
+!!!THIS FILES ARE EXTENSIONS FOR BotOS CREATED BY Nick300!!!
 
 
 IT
 
-!!!QUESTO NON È UN PROGRAMMA, NÉ NIENT'ALTRO DI FUNZIONANTE AUTONOMAMENTE!!!
-
-Questi file possono essere usati solamente per implementare BotOS, creato da @Falco131.
+!!!QUESTI FILE SONO ESTENSIONI DEL PROGRAMMA BotOS CREATO DA Nik300!!!
 
 ########################################################################################
