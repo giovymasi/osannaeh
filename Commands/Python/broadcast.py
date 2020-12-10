@@ -26,7 +26,8 @@ try:
             message += word1 + " "
         try:
             PyBot.SendTextMessage(user.id, message)
-        pass
+        except:
+            pass
     elif args[0] == "all":
         thisgroup = types.Group(PyBot.MessageArgs.Message.Chat.Title)
         args.remove(args[0])
@@ -35,6 +36,7 @@ try:
         for utente in thisgroup.users:
             try:
                 PyBot.SendTextMessage(utente.id, message)
-            pass
+            except:
+                pass
 except Exception:
     PyBot.SendTextMessage(str(Exception))
