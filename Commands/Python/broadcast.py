@@ -4,7 +4,7 @@ import sys
 try:
     message = ""
     if args[0]=="group":
-        group = types.Group(args[1])
+        group = BotOS_API.types.Group(args[1])
         chatId = Types.ChatId(group.group_name)
         if group == None:
             PyBot.SendTextMessage("Il bot non e' stato inserito in questo gruppo.")
@@ -16,7 +16,7 @@ try:
         PyBot.SendTextMessage(chatId, message)
     elif args[0]=="user":
         user = clr.Reference[BotOS_API.types.User]()
-        types.Database.try_GetUser(args[1].replace("@", ""), user)
+        BotOS_API.types.Database.try_GetUser(args[1].replace("@", ""), user)
         if user == None:
             PyBot.SendTextMessage("L'utente non e' registrato.")
             sys.exit
@@ -29,7 +29,7 @@ try:
         except:
             pass
     elif args[0] == "all":
-        thisgroup = types.Group(PyBot.MessageArgs.Message.Chat.Title)
+        thisgroup = BotOS_API.types.Group(PyBot.MessageArgs.Message.Chat.Title)
         args.remove(args[0])
         for word2 in args:
             message += word2 + " "
