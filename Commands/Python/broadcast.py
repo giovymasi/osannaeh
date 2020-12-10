@@ -16,7 +16,7 @@ try:
         PyBot.SendTextMessage(chatId, message)
     elif args[0]=="user":
         user = clr.Reference[BotOS_API.types.User]()
-        BotOS_API.types.Database.try_GetUser(args[1].replace("@", ""), user)
+        BotOS_API.types.Database.try_GetUser(args[1].replace("@", ""), user.Value)
         if user == None:
             PyBot.SendTextMessage("L'utente non e' registrato.")
             sys.exit
