@@ -1,11 +1,11 @@
 from BotOS_API import *
 from Telegram import Bot
+from telegram import ParseMode
 import sys
 try:
     message = ""
     if args[0]=="group":
-        group = BotOS_API.types.Group(args[1])
-        chatId = Types.ChatId(group.group_name)
+        group = types.Group(args[1])
         if group == None:
             PyBot.SendTextMessage("Il bot non e' stato inserito in questo gruppo.")
             sys.exit
@@ -13,10 +13,9 @@ try:
         args.remove(args[1])
         for word in args:
             message += word + " "
-        PyBot.SendTextMessage(chatId, message)
+        PyBot.SendTextMessage(group.group_id, message)
     elif args[0]=="user":
-        user = clr.Reference[BotOS_API.types.User]()
-        BotOS_API.types.Database.try_GetUser(args[1].replace("@", ""), user.Value)
+        user = types.Database.GetUser(args[1].replace("@", ""))
         if user == None:
             PyBot.SendTextMessage("L'utente non e' registrato.")
             sys.exit
@@ -29,7 +28,7 @@ try:
         except:
             pass
     elif args[0] == "all":
-        thisgroup = BotOS_API.types.Group(PyBot.MessageArgs.Message.Chat.Title)
+        thisgroup = types.Group(PyBot.MessageArgs.Message.Chat.Title)
         args.remove(args[0])
         for word2 in args:
             message += word2 + " "
