@@ -16,7 +16,7 @@
                 JSBot.SendTextMessage(group.group_id, message);
                 JSBot.SendTextMessage(Utilities.ShortnameToEmoji(":white_check_mark:Messaggio inviato"));
             }
-            catch {
+            catch(errore) {
                 JSBot.SendTextMessage(Utilities.ShortnameToEmoji(":x:Non sono riuscito a inviare il messaggio"));
             }
         }
@@ -30,7 +30,7 @@
             try {
                 JSBot.SendTextMessage(user.id, message);
                 JSBot.SendTextMessage(Utilities.ShortnameToEmoji(":white_check_mark:Messaggio inviato"));
-            } catch {
+            } catch(errore1) {
                 JSBot.SendTextMessage(Utilities.ShortnameToEmoji(":x:Non sono riuscito a inviare il messaggio"));
             }
         }
@@ -44,7 +44,7 @@
             for (var utente of users) {
                 try {
                     JSBot.SendTextMessage(utente.id, message);
-                } catch { }
+                } catch(errore2) { }
             }
         }
         else if (args[0] == "allshow") {
