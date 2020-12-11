@@ -1,6 +1,4 @@
 from BotOS_API import *
-from Telegram import Bot
-from telegram import ParseMode
 import sys
 try:
     message = ""
@@ -14,6 +12,7 @@ try:
         for word in args:
             message += word + " "
         PyBot.SendTextMessage(group.group_id, message)
+        PyBot.SendTextMessage(Utilities.ShortnameToEmoji(":white_check_mark") + "Inviato")
     elif args[0]=="user":
         user = types.Database.GetUser(args[1].replace("@", ""))
         if user == None:
@@ -25,8 +24,9 @@ try:
             message += word1 + " "
         try:
             PyBot.SendTextMessage(user.id, message)
+            PyBot.SendTextMessage(Utilities.ShortnameToEmoji(":white_check_mark") + "Inviato")
         except:
-            pass
+            PyBot.SendTextMessage(Utilities.ShortnameToEmoji(":x:") + "Non sono riuscito a inviare il messaggio")
     elif args[0] == "all":
         thisgroup = types.Group(PyBot.MessageArgs.Message.Chat.Title)
         args.remove(args[0])
@@ -37,5 +37,16 @@ try:
                 PyBot.SendTextMessage(utente.id, message)
             except:
                 pass
+    elif args[0] == "allshow":
+        thisgroup1 = types.Group(PyBot.MessageArgs.Message.Chat.Title)
+        args.remove(args[0])
+        for word3 in args:
+            message += word3 + " "
+        for utente1 in thisgroup1.users:
+            try:
+                PyBot.SendTextMessage(utente1.id, message)
+                PyBot.SendTextMessage(Utilities.ShortnameToEmoji(":white_check_mark:") + "@" + utente1.username + "ha ricevuto il messaggio")
+            except:
+                PyBot.SendTextMessage(Utilities.ShortnameToEmoji(":x:") + "@" + utente1.username + "non ha ricevuto il messaggio")
 except Exception:
     PyBot.SendTextMessage(str(Exception))
