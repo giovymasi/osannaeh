@@ -32,6 +32,7 @@
                 JSBot.SendTextMessage(Utilities.ShortnameToEmoji(":white_check_mark:Messaggio inviato"));
             } catch(errore1) {
                 JSBot.SendTextMessage(Utilities.ShortnameToEmoji(":x:Non sono riuscito a inviare il messaggio"));
+                JSBot.SendTextMessage(errore1);
             }
         }
         else if (args[0] == "all") {
