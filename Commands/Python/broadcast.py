@@ -49,4 +49,4 @@ try:
             except:
                 PyBot.SendTextMessage(Utilities.ShortnameToEmoji(":x:") + "@" + utente1.username + "non ha ricevuto il messaggio".replace("<", "-"))
 except Exception:
-    PyBot.SendTextMessage(str(Exception).replace("<", "-"))
+    PyBot.SendTextMessage(str(Exception.Message).replace("<", "-"))
