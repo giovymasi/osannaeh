@@ -15,7 +15,8 @@
             try {
                 JSBot.SendTextMessage(group.group_id, message);
                 JSBot.SendTextMessage(Utilities.ShortnameToEmoji(":white_check_mark:Messaggio inviato"));
-            } catch {
+            }
+            catch {
                 JSBot.SendTextMessage(Utilities.ShortnameToEmoji(":x:Non sono riuscito a inviare il messaggio"));
             }
         }
