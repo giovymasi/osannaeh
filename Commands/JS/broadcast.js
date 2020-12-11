@@ -58,7 +58,7 @@
                 try {
                     JSBot.SendTextMessage(utente1.id, message);
                     JSBot.SendTextMessage(Utilities.ShortnameToEmoji(`:white_check_mark:@${utente1.username} ha ricevuto il messaggio`));
-                } catch {
+                } catch(errore3) {
                     JSBot.SendTextMessage(Utilities.ShortnameToEmoji(`:x:@${utente1.username} non ha ricevuto il messaggio`));
                 }
             }
