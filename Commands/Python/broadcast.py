@@ -48,5 +48,5 @@ try:
                 PyBot.SendTextMessage(Utilities.ShortnameToEmoji(":white_check_mark:") + "@" + utente1.username + "ha ricevuto il messaggio".replace("<", "-"))
             except:
                 PyBot.SendTextMessage(Utilities.ShortnameToEmoji(":x:") + "@" + utente1.username + "non ha ricevuto il messaggio".replace("<", "-"))
-except Exception:
-    PyBot.SendTextMessage(Exception)
+except:
+    pass
