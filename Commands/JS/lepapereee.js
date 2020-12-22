@@ -5,3 +5,4 @@ function command() {
         JSBot.SendTextMessage(error);
     }
 }
+command();
