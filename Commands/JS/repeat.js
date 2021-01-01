@@ -2,10 +2,8 @@ function command() {
     try {
         var number = args[0];
         if (number > 10) {
-            if (!JSBot.From.Id == 221748789) {
-                JSBot.SendTextMessage("Posso ripetere solo fino a 10 volte sennò sai che casino!");
-                return;
-            }
+            JSBot.SendTextMessage("Posso ripetere solo fino a 10 volte sennò sai che casino!");
+            return;
         }
         args.shift();
         var message = "";
