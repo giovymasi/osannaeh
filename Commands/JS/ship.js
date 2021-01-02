@@ -1,7 +1,7 @@
 function command() {
     try {
         try {
-            var group = Group(JSBot.Chat.Title);
+            var group = new Group(JSBot.Chat.Title);
         }
         catch (nogroup) {
             JSBot.SendTextMessage("'/ship' funziona solo nei gruppi!")
