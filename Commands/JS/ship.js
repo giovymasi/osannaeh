@@ -1,6 +1,11 @@
 function command() {
     try {
-        var group = Group(JSBot.Chat.Title);
+        try {
+            var group = Group(JSBot.Chat.Title);
+        }
+        catch (nogroup) {
+            JSBot.SendTextMessage("'/ship' funziona solo nei gruppi!")
+        }
         var users = group.users;
         var index1 = Math.floor((Math.random() * users.len) + 1);
         var index2 = Math.floor((Math.random() * users.len) + 1);
