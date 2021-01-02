@@ -2,7 +2,7 @@
     try {
         var number = args[0];
         if (number > 10) {
-            JSBot.SendTextMessage("Posso ripetere solo fino a 10 volte sennò sai che casino!");
+            JSBot.SendTextMessage("Posso ripetere solo fino a 10 volte!");
             return;
         }
         args.shift();
