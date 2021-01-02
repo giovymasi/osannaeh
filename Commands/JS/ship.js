@@ -12,7 +12,9 @@ function command() {
         if (index1 == index2) {
             index2++;
         }
-        var message = `@${group.users[index1].username} & @${group.users[index2].username}`;
+        var user1 = group.users[index1];
+        var user2 = group.users[index2];
+        var message = `@${user1.username} & @${user2.username}`;
         JSBot.SendTextMessage(message);
     }
     catch (error) {
