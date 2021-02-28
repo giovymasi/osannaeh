@@ -70,4 +70,7 @@ function command() {
         }
     }
 }
-command();
+var sender_ = Database.GetUser(JSBot.From.id);
+if (sender_.is_admin | sender_.is_moderator) {
+    command();
+}
