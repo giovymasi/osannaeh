@@ -59,8 +59,7 @@ function command() {
     }
     else if (warns >= 6) {
         JSBot.SendTextMessage(Utilities.ShortnameToEmoji(":no_entry_sign:") + username + " sei al" + warns + "° warn! Sei stato bannato");
-        var bantime = new Time(365, 0, 0, 0);
-        JSBot.Ban(user, bantime);
+        JSBot.Ban(user);
     }
 }
 command();
