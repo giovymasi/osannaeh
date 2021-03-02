@@ -1,5 +1,5 @@
 function command() {
-    var started;
+    static var started;
     if (!path.directory.exists(Utilities.EnvPath + "\\COMMANDS\\ASSETS\\TheWall")) {
         path.directory.create(Utilities.EnvPath + "\\COMMANDS\\ASSETS\\TheWall");
     }
