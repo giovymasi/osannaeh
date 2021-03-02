@@ -1,15 +1,15 @@
 function command() {
     var started;
-    if (!path.directory.exist(Utilities.EnvPath + "\\COMMANDS\\ASSETS\\TheWall")) {
+    if (!path.directory.exists(Utilities.EnvPath + "\\COMMANDS\\ASSETS\\TheWall")) {
         path.directory.create(Utilities.EnvPath + "\\COMMANDS\\ASSETS\\TheWall");
     }
-    if (!path.directory.exist(Utilities.EnvPath + "\\COMMANDS\\ASSETS\\TheWall\\Users")) {
+    if (!path.directory.exists(Utilities.EnvPath + "\\COMMANDS\\ASSETS\\TheWall\\Users")) {
         path.directory.create(Utilities.EnvPath + "\\COMMANDS\\ASSETS\\TheWall\\Users");
     }
-    if (!path.file.exist(Utilities.EnvPath + "\\COMMANDS\\ASSETS\\TheWall\\started.json")) {
+    if (!path.file.exists(Utilities.EnvPath + "\\COMMANDS\\ASSETS\\TheWall\\started.json")) {
         path.file.create(Utilities.EnvPath + "\\COMMANDS\\ASSETS\\TheWall\\started.json");
     }
-    if (!path.file.exist(Utilities.EnvPath + "\\COMMANDS\\ASSETS\\TheWall\\concorrente.json")) {
+    if (!path.file.exists(Utilities.EnvPath + "\\COMMANDS\\ASSETS\\TheWall\\concorrente.json")) {
         path.file.create(Utilities.EnvPath + "\\COMMANDS\\ASSETS\\TheWall\\concorrente.json");
     }
     if (args[0] == "start") {
@@ -36,10 +36,10 @@ function command() {
     if (args[0] == "concorrente") {
         if (json.loads(path.file.read(Utilities.EnvPath + "\\COMMANDS\\ASSETS\\TheWall\\started.json")) == true) {
             var user = Database.GetUser(args[1].Replace("@", ""));
-            if (!path.directory.exist(Utilities.EnvPath + "\\COMMANDS\\ASSETS\\TheWall\\Users\\" + user.id)) {
+            if (!path.directory.exists(Utilities.EnvPath + "\\COMMANDS\\ASSETS\\TheWall\\Users\\" + user.id)) {
                 path.directory.create(Utilities.EnvPath + "\\COMMANDS\\ASSETS\\TheWall\\Users\\" + user.id);
             }
-            if (!path.file.exist(Utilities.EnvPath + "\\COMMANDS\\ASSETS\\TheWall\\Users" + user.id + "\\points.txt")) {
+            if (!path.file.exists(Utilities.EnvPath + "\\COMMANDS\\ASSETS\\TheWall\\Users" + user.id + "\\points.txt")) {
                 path.file.create(Utilities.EnvPath + "\\COMMANDS\\ASSETS\\TheWall\\Users" + user.id + "\\points.txt");
             }
             var concorrente = json.dumps(user);
